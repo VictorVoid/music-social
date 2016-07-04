@@ -1,0 +1,24 @@
+{
+  musico:{
+    nome
+  , email
+  , sexo
+  , instrumento
+  , cadastroAdicional:[{
+      dt_nascimento
+    , facebookUrl
+    , influenciasMusicais
+    , nomeDeBandaAtual
+    , equipamento
+    , descricao
+    , estilosPrincipais
+    }]
+  }
+, banda:{
+    nome
+  , email
+  , estiloMusical
+  , facebookUrl
+  , soundcloudUrl
+  }
+}
