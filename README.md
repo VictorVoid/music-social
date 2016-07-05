@@ -5,7 +5,7 @@ também queiram ?
 
 ####  Essa plataforma é para você:exclamation:
 
-A idéia a príncipio é ajudar músicos a formar sua banda. A plataforma irá ajudar a encontrar o 
+A idéia a princípio é ajudar músicos a formar sua banda. A plataforma irá ajudar a encontrar o 
 músico que você sempre quis para seu projeto musical.
 
 ## Features: 
