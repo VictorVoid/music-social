@@ -42,7 +42,7 @@ var _schema = {
     }
   },
   music_styles: [],
-  birth_dt {type: Date},
+  birth_dt: {type: Date},
   updated_at: { type: Date },
   create_at: {type: Date, default: Date.now },
   provider: String,
