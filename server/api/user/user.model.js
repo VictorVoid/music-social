@@ -41,6 +41,8 @@ var _schema = {
       }
     }
   },
+  music_styles: [],
+  birth_dt {type: Date},
   updated_at: { type: Date },
   create_at: {type: Date, default: Date.now },
   provider: String,
@@ -48,7 +50,8 @@ var _schema = {
   facebook: {},
   twitter: {},
   google: {},
-  github: {}
+  github: {},
+  soundcloud:{}
 }
 
 var UserSchema = new Schema(_schema);
