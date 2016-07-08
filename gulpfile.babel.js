@@ -17,6 +17,11 @@ import runSequence from 'run-sequence';
 import {protractor, webdriver_update} from 'gulp-protractor';
 import {Instrumenter} from 'isparta';
 import nib from 'nib';
+import plumber from 'gulp-plumber';
+import stylus from 'gulp-stylus';
+import jeet from 'jeet';
+import rupture from 'rupture';
+import koutoSwiss from 'kouto-swiss';
 
 var plugins = gulpLoadPlugins();
 var config;
@@ -128,8 +133,8 @@ let lintServerTestScripts = lazypipe()
 let styles = lazypipe()
     .pipe(plugins.sourcemaps.init)
     .pipe(plugins.stylus, {
-        use: [nib()],
-        errors: true
+        use: [koutoSwiss(), jeet(),rupture()],
+        compress: true
     })
 
     .pipe(plugins.autoprefixer, {browsers: ['last 1 version']})
