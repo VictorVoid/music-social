@@ -1,0 +1,97 @@
+//T Resolution
+cut = 37.5rem
+
+//
+// Variables
+//
+// 1. Colors
+// 2. Elements
+// 3. Media Queries
+// 4. Typography
+//
+// ===============================================================
+
+//
+// 1. Colors
+// --------------------------------------------------
+main = #5e9edc
+sec  = #FFFFFF
+green = #4dba7a
+orange = #f1634b
+purple = #9d60b8
+lightGray = #F2F2F2
+lightBlue = #009bdd
+darkBlue = #0079ac
+texts = #333333
+
+//
+// 2. Elements
+// --------------------------------------------------
+
+
+//
+// 3. Media Queries
+// --------------------------------------------------
+
+// scale                  0     400px   600px   800px   1050px  1800px
+
+//                        └──┬──┘ └──┬──┘ └──┬──┘ └──┬──┘ └──┬──┘ └──┬──
+// Slice numbers:             1      2        3       4       5       6
+// scale-names              'xs'    's'      'm'     'l'     'xl'    'hd'
+
+
+// scale                  0     400px  600px   800px   1050px  1800px
+
+//                        └──┬──┘ └──────────┬─────────┘ └──┬──┘ └──┬──
+// scale-devices             'mobile'     'tablet'        'desktop' 'hd'
+
+$debug-enable = true
+
+$debug-break-point
+    &:before
+        position fixed
+        bottom 0
+        right 0
+        font-size 2rem
+        color #FFF
+        background-color rgba(0,0,0,0.8)
+        padding 0 35px
+        z-index 500
+
+        +at(1)
+            content 'xs'
+        +at(2)
+            content 's'
+        +at(3)
+            content 'm'
+        +at(4)
+            content 'l'
+        +at(5)
+            content 'xl'
+        +at(6)
+            content 'hd'
+
+
+
+$debug-grid = false
+    $debug-grid
+        &:after
+            position fixed
+            top 0
+            left 0
+            content ' '
+            width 100%
+            height 100%
+
+            +at(1)
+                background url('../../../assets/images/grid/mobile.png') top center repeat-y
+            +between(2,3)
+                background url('../../../assets/images/grid/tablet.png') top center repeat-y
+            +above(4)
+                background url('../../../assets/images/grid/desktop.png') top center repeat-y
+
+
+
+//
+// 3. Fonts
+// --------------------------------------------------

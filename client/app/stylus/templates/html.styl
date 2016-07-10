@@ -1,0 +1,14 @@
+html
+    //-
+
+body
+    overflow-x hidden
+    transition all 1s ease
+
+    if ( $debug-enable is true ){
+        @extend $debug-break-point
+    }
+
+    if ( $debug-grid is true ){
+        @extend $debug-grid
+    }

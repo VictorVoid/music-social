@@ -38,6 +38,7 @@ const paths = {
         ],
         styles: [`${clientPath}/{app,components}/**/*.styl`],
         mainStyle: `${clientPath}/app/app.styl`,
+        stylus: [`${clientPath}/app/stylus/**/*.styl`],
         views: `${clientPath}/{app,components}/**/*.html`,
         mainView: `${clientPath}/index.html`,
         test: [`${clientPath}/{app,components}/**/*.{spec,mock}.js`],
@@ -242,10 +243,10 @@ gulp.task('inject:css', () => {
 gulp.task('inject:styl', () => {
     return gulp.src(paths.client.mainStyle)
         .pipe(plugins.inject(
-            gulp.src(_.union(paths.client.styles, ['!' + paths.client.mainStyle]), {read: false})
+            gulp.src(_.union(paths.client.styles, ['!' + paths.client.mainStyle, '!' + paths.client.stylus]), {read: false})
                 .pipe(plugins.sort()),
             {
-                starttag: '/* inject:styl */',
+                starttag: '/* inject:styl-components */',
                 endtag: '/* endinject */',
                 transform: (filepath) => {
                     let newPath = filepath

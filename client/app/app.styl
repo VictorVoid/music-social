@@ -1,40 +1,69 @@
 @import "../bower_components/font-awesome/css/font-awesome.css"
-//temporario...
-@font-face
-  font-family: 'FontAwesome'
-  src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.1.0')
-  src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
-  url('../bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),
-  url('../bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),
-  url('../bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
-  font-weight: normal
-  font-style: normal
+
+/*
+    Syntax Quick Reference for Jeet
+    --------------------------
+    column(ratios = 1, offset = 0, cycle = 0, uncycle = 0, gutter = jeet.gutter)
+    span(ratio = 1, offset = 0)
+    shift(ratios = 0, col_or_span = column, gutter = jeet.gutter)
+    unshift()
+    edit()
+    center(max_width = 1410px, pad = 0)
+    stack(pad = 0, align = false)
+    unstack()
+    align(direction = both)
+    cf()
+    above() -- acima(portuguese)
+    below() -- abaixo(portuguese)
+    For more info see:
+        Kouto Swiss Doc: http://kouto-swiss.io/
+        Jeet Doc: http://jeet.gs
+    And of course, look in node_modules for axis-css and jeet
+*/
+// Jeet
+    @import 'kouto-swiss';
+    @import 'jeet';      // Import Jeet to Semantic Grids (http://jeet.gs/)
   
-//
-// App-wide Styles
-//
-font-face( "Open Sans", "../assest/fonts/Open_Sans/OpenSans-ExtraBold", 900 )
+// Normalize
+    normalize(); // Reset elements
 
-body
-  font-family "Open Sans"
+// Core
+// --------------------------------------------------
+// Functions & Helpers
+    @import 'stylus/_core/variables'; // Variables sets
+    @import 'stylus/_core/typography';
+    @import 'stylus/_core/global';
+    @import 'stylus/_core/helpers';
 
-.browserupgrade
-  background #ccc
-  color #000
-  margin 0.2em 0
-  padding 0.2em 0
 
-// Component styles are injected through gulp
+// Why Atomic Design ? (http://bradfrost.com/blog/post/atomic-web-design/)
+
+// Atoms
+// --------------------------------------------------
+    // @import 'stylus/atoms/atom-item';
+    
+    @import 'stylus/atoms/atom-menu';
+    @import 'stylus/atoms/atom-social';
+    @import 'stylus/atoms/atom-header';
+    
+// Molecules
+// --------------------------------------------------
+   // @import 'stylus/molecules/molecule-item';
+   @import 'stylus/molecules/molecule-menu';
+   @import 'stylus/molecules/molecule-header';
+
+// Organisms
+// --------------------------------------------------
+   // @import 'stylus/organisms/organism-item';
+
+// Pages
+// --------------------------------------------------
+    @import 'stylus/templates/html';
+
+//(client/app/**/*.styl, !client/app/stylus/**/*.styl)
+// Component styles are injected through gulp 
 /* inject:styl */
-
-@import "kouto-swiss"
-@import "jeet"
-normalize();
-@import 'variables'
-@import 'global'
 @import 'admin/admin';
-@import 'main/main';
 @import '../components/footer/footer';
-@import '../components/navbar/navbar';
 @import '../components/oauth-buttons/oauth-buttons';
 /* endinject */

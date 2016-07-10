@@ -1,18 +1,40 @@
-<div ng-controller="NavbarController">
-  <div class="container">
-    <div class="navbar-header">
-      <h1 class="header-logo">Music<span>In</span></h1>
+<div ng-controller="NavbarController" class="organism-nav-menu">
+    <div class="molecule-container">
+      <div class="atom-menu-logo">
+          <h1 class="atom-menu-text">Logo</h1>
+      </div>
+      <ul class="atom-menu-list">
+        <li class="atom-menu-item">Home</li>
+        <li class="atom-menu-item">Sobre</li>
+      </ul>
+      <div class="atom-btn-login">
+        <a class="btn" ui-sref="login">Login</a>
+        <a ng-show="nav.isLoggedIn()" class="atom-btn" ui-sref="logout">Logout</a>
+      </div>
     </div>
+    <div class="molecule-menu-mobile">
+
+      <div class="atom-menu-toggle">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+
       <nav>
         <ul>
-          <p>Já possui uma conta ?</p>
-          <li ng-hide="nav.isLoggedIn()" ui-sref-active="active" class="login"><a class="btn" ui-sref="login">Login</a></li>
-          <li ng-hide="nav.isLoggedIn()" ui-sref-active="active" class="signup"><a class="" ui-sref="signup">Cadastrar com email</a></li>
-          <li ng-show="nav.isLoggedIn()"><p class="navbar-text">Hello {{ nav.getCurrentUser().name }}</p></li>
-          <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
-          <li ng-show="nav.isLoggedIn()"><a ui-sref="logout">Logout</a></li>
+          <li class="atom-menu-item">Home</li>
+          <li class="atom-menu-item">Sobre</li>
+          <li ng-show="nav.isLoggedIn()" class="atom-menu-item">
+            <a class="atom-menu-tem" ui-sref="logout">Logout</a>
+          </li>
         </ul>
       </nav>
-      <oauth-buttons classes="btn-block"></oauth-buttons>
-  </div>
+
+      <ul class="atom-social-list">
+        <li class="atom-social-item"><span>Twitter</span></li>
+        <li class="atom-social-item"><span>Facebook</span></li>
+        <li class="atom-social-item"><span>Instagram</span></li>
+      </ul>
+
+    </div>
 </div>
