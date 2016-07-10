@@ -1,9 +1,63 @@
 .atom-btn-login
-	col(2/3)
+	position absolute
+	right 0
+	top 0
 	text-align right
 	margin-top 25px
-	
+	margin-right 25px
+
 .molecule-menu-mobile
-	display none
-	&.active
-		display block
+	position absolute
+	top 0
+	left 0
+	width 100%
+	background-color #fff
+	min-height 692px
+	.atom-menu-icon
+		width 200px
+		col(1.5/3)
+		margin-bottom 80px
+		
+		+above(3)
+			col(1/3)
+			
+	nav
+		col(1/3)
+		margin-top 18%
+		
+		+above(3)
+			margin-top 0
+			col(1.5/3)	
+		+above(3)
+			margin-top 8%
+		ul
+			.atom-menu-item
+				padding 15%
+				font-size 14px
+				text-transform uppercase
+				.atom-menu-link
+					color green-light
+				
+				+above(3)
+					padding 11%
+				
+				+above(5)
+					padding-top 5%
+		
+
+/* Block 1 animations */
+.block-animate-show-setup {
+  transition opacity 1.5s;
+  opacity: 0;
+}
+.block-animate-show-start {
+  opacity: 1;
+}
+
+.block-animate-hide-setup {
+	transition-duration 0.2s;
+  	opacity: 1;
+}
+.block-animate-hide-start {
+  opacity: 0;
+}

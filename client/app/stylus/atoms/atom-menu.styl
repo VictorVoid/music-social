@@ -1,12 +1,83 @@
 .atom-menu-logo
-	//-
-.atom-menu-text
 	col(1/3)
+.atom-menu-text
 	color white
-	margin 1% 0 0 2%
+	display none
+	
+	+above(4)
+		display block
+		
 .atom-menu-list
 	display none
 .atom-menu-item
-	
+	//-
 .atom-menu-toggle
 	//-
+.atom-menu-active
+	transition all 1s
+	width 2px
+	height 2px
+	background-color green-light	
+.atom-menu-active.active
+	width 100px
+	
+.atom-menu-icon
+	width 80px		
+	padding-left 10px
+	margin-top 2%
+	
+#nav-lines
+	background-color: rgba(51, 123, 153, 0.4)
+	width: 50px
+	height: 50px
+	position: absolute
+	left: 5%
+	top: 2%
+	cursor: pointer
+	z-index 10
+	.rect 
+		stroke-width: 0
+		stroke: white
+		fill: transparent
+		transform-origin: 50% 50%
+		transition: all 0.3s ease-in-out
+		transform: rotate(0deg)
+		
+	.cross-line 
+		stroke: #ffffff
+		stroke-width: 0
+		transform-origin: 50% 50%
+		transition all 0.3s ease-in-out
+	.nav-line 
+		stroke: #fff
+		transform-origin: 50% 50%
+		stroke-width: 2px
+		transition all 0.3s ease-in-out
+	&:hover 
+		.rect 
+			stroke-width: 1
+			transform: rotate(45deg)
+
+		.nav-line 
+			transform: scale(0.5)
+ 
+		#nav-line-1 
+			transform: translateY(10px) scale(0.5)
+
+
+		#nav-line-3 
+			transform: translateY(-10px) scale(0.5)
+ 
+	&.active 
+		left initial
+		right 3%
+		.cross-line 
+			stroke-width: 2
+			transform scale(0.8)
+
+		.nav-line,#nav-line-1,#nav-line-3
+			transform scale(0.01)
+   
+	&:hover
+		.cross-line
+			transform scale(0.6)
