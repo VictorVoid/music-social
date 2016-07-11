@@ -27,7 +27,7 @@
 
 // Core
 // --------------------------------------------------
-// Functions & Helpers
+    // @import 'stylus/_core/name';
     @import 'stylus/_core/variables'; // Variables sets
     @import 'stylus/_core/typography';
     @import 'stylus/_core/global';
@@ -45,21 +45,24 @@
     @import 'stylus/atoms/atom-scroll';
     @import 'stylus/atoms/atom-header';
     @import 'stylus/atoms/atom-icons';
+    @import 'stylus/atoms/atom-block'; //home > blocks
     
 // Molecules
 // --------------------------------------------------
    // @import 'stylus/molecules/molecule-item';
-   @import 'stylus/molecules/molecule-menu';
-   @import 'stylus/molecules/molecule-header';
+    @import 'stylus/molecules/molecule-menu';
+    @import 'stylus/molecules/molecule-header';
+    @import 'stylus/molecules/molecule-home';
 
 // Organisms
 // --------------------------------------------------
    // @import 'stylus/organisms/organism-item';
+    @import 'stylus/organisms/organism-home';
 
 // Pages
 // --------------------------------------------------
     @import 'stylus/templates/html';
-
+    
 //(client/app/**/*.styl, !client/app/stylus/**/*.styl)
 // Component styles are injected through gulp 
 /* inject:styl */

@@ -7,13 +7,21 @@
     constructor($http) {
       this.$http = $http;
       this.awesomeThings = [];
+      this.block = {};
+      this.home = function() {
+        this.block = {
+          btnDesc1: 'Descrição'
+        , btnDesc2: 'Descrição'
+        , btnDesc3: 'Descrição'
+        };
+      }
     }
 
     $onInit() {
-      this.$http.get('/api/things')
-        .then(response => {
-          this.awesomeThings = response.data;
-        });
+      // this.$http.get('/api/things')
+      //   .then(response => {
+      //     this.awesomeThings = response.data;
+      //   });
     }
 
     addThing() {
@@ -29,7 +37,6 @@
       this.$http.delete('/api/things/' + thing._id);
     }
   }
-
   angular.module('musicSocialApp')
     .component('main', {
       templateUrl: 'app/main/main.html',

@@ -1,0 +1,93 @@
+.atom-block
+	background-color darkBlue
+	color white
+	position relative
+	text-align center
+	margin-bottom -15px
+	height 280px
+	overflow hidden
+	background no-repeat top/cover url(https://visualhunt.com/photos/xl/1/woman-playing-guitar-in-music-store.jpg)
+	&:hover
+		.atom-block-image
+			background-color rgba(178, 138, 218, 0.52)
+		.atom-block-btn
+			.btn
+				border 1px solid grayish-light
+				font-size 10px
+//list backgrounds atom blocks
+.atom-block-2
+	@extends .atom-block
+	background no-repeat top/cover url(../../assets/images/saxphone-musician.jpg)
+
+.atom-block-3
+	@extends .atom-block
+	background no-repeat top/cover url(https://visualhunt.com/photos/xl/1/musicians-playing-on-stage-at-concert.jpg)
+
+
+.atom-block-image
+	padding 15px
+	height 100%
+	overflow none
+	transition all .2s
+	
+.atom-block-border
+	-moz-box-shadow inset 0px 0px 0px 15px grayish-light
+	box-shadow inset 0px 0px 0px 15px grayish-light
+	position absolute
+	top 0
+	width 100%
+	height 100%
+	z-index 4
+	cursor pointer
+	
+
+.atom-block-info
+	position absolute
+	top 39px
+	max-width 400px
+	color grayish-light
+	$center('horizontal')	
+	
+.atom-block-title
+	font-weight 900
+	font-size em(40)
+	text-transform uppercase
+	+above(3)
+		font-size em(45)
+		
+.atom-block-description
+	font-size em(14)
+	font-weight 700
+	+above(3)
+		font-size em(16)
+		
+.atom-block-btn
+	font-size em(14)
+	bottom 100px
+	position relative
+	.btn
+		transition: all .4s
+		background transparent
+		border 3px solid main
+	+above(3)
+		bottom 100px
+		
+.atom-block-content
+	opacity 0
+	visibility hidden
+	position absolute
+	top 0
+	max-width 400px
+	v = 200px
+	left "calc(50% - %s)" % v
+	
+.atom-block.active1
+	background main
+	.atom-block-info
+		visibility hidden
+		opacity 0
+	
+	.atom-block-content
+		opacity 1
+		visibility visible
+	

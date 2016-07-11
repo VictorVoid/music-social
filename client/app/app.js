@@ -2,8 +2,8 @@
 
 angular.module('musicSocialApp', ['musicSocialApp.auth', 'musicSocialApp.admin',
     'musicSocialApp.constants', 'ngCookies', 'ngResource', 'ngAnimate', 'ngSanitize', 'ui.router',
-    'validation.match'
-  ])
+    'validation.match', 'angularTypewrite'
+ ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
 
