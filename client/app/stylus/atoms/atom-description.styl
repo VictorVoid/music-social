@@ -1,0 +1,72 @@
+.atom-explore-left
+//	
+.atom-description
+	height 460px
+	background no-repeat top/cover url(https://visualhunt.com/photos/xl/1/performance-show-showing.jpg)
+	position relative
+	+above(5)
+		col(7/12, gutter: 0)
+.atom-description-title
+	font-size em(38)
+	color white
+	font-weight 900
+	text-transform uppercase
+	+above(4)
+		font-size em(44)
+.atom-description-content
+	position absolute
+	top 20%
+	vertical-align middle
+	text-align center
+	padding-left 40px
+	padding-right 40px
+	
+.atom-description-explore
+	font-size em(22)
+	color white
+
+.atom-explore
+	position relative
+	clearfix();
+	+above(5)
+		margin-top 15px
+		col(5/12, gutter: 0)
+		
+.atom-explore-group
+	span(2/4)
+	background-color main
+.atom-explore-content
+	height 100%
+	p
+		color white
+		font-size em(22)
+		display block
+		margin-top 44px
+		font-weight 500
+		span
+			font-size em(26)
+			color darkBlue
+			margin-top 7px
+			
+.atom-border-horizontal
+	position absolute
+	width 100%
+	height 2px
+	top 50%
+	left 0
+	z-index 4
+	background-color borderBlue
+	opacity .4
+.atom-border-vertical
+	position absolute
+	width 1px
+	top 0
+	height 100%
+	left 50%
+	background-color borderBlue
+	opacity .4
+	
+.atom-explore-block
+	display table
+	width 100%
+	height 100%

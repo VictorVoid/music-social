@@ -7,6 +7,8 @@
 	height 280px
 	overflow hidden
 	background no-repeat top/cover url(https://visualhunt.com/photos/xl/1/woman-playing-guitar-in-music-store.jpg)
+	+above(5)
+		background-position-y -220px
 	&:hover
 		.atom-block-image
 			background-color rgba(178, 138, 218, 0.52)
@@ -22,7 +24,8 @@
 .atom-block-3
 	@extends .atom-block
 	background no-repeat top/cover url(https://visualhunt.com/photos/xl/1/musicians-playing-on-stage-at-concert.jpg)
-
+	+above(5)
+		background-position-y -350px
 
 .atom-block-image
 	padding 15px
@@ -76,18 +79,34 @@
 	opacity 0
 	visibility hidden
 	position absolute
-	top 0
-	max-width 400px
+	top 20px
 	v = 200px
 	left "calc(50% - %s)" % v
-	
+	padding 10px 30px
+	max-width 320px
+	font-size em(10)
+	transition all .5s
+	+above(3)
+		max-width 400px
+		padding 0;
+		
 .atom-block.active1
 	background main
+	
 	.atom-block-info
 		visibility hidden
 		opacity 0
-	
+		
 	.atom-block-content
 		opacity 1
 		visibility visible
-	
+		font-size em(16)	
+	.atom-block-btn
+		.btn
+			border 1px solid grayish-light
+			
+.atom-block-2.active2
+	@extends .atom-block.active1
+
+.atom-block-3.active3
+	@extends .atom-block.active1

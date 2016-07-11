@@ -1,6 +1,6 @@
 <header class="molecule-header">
 	<div class="atom-header-container">
-		<h1 class="atom-header-frase">Encontre os seus músicos</h1>
+		<h1 class="atom-header-frase">Você tem uma banda ?</h1>
 			<p class="atom-header-paragrafo">Se você sabe tocar e quer ter uma banda, esse é o seu lugar.</p>
 			<a href="#scroll" data-scroll class="down">
 			<svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down"></use></svg>
@@ -8,11 +8,11 @@
 	</div>
 </header>
 <div class="organism-home">
-	<section class="molecule-home">
+	<section class="molecule-block">
 
 		<div class  ="atom-block" 
 			ng-init ="block1.btnDesc = 'Descrição';  block1.active = false"
-			ng-click="block1.active = !block1.active; block1.btnDesc = block1.active ? 'Descrição':'Voltar' "
+			ng-click="block1.active = !block1.active; block1.btnDesc = block1.active ? 'Voltar':'Descrição'"
 			ng-class="{'active1': block1.active}">
 
 			<div class="atom-block-image"></div>
@@ -29,32 +29,93 @@
 
 		</div>
 		<!-- atom block end -->
-		<div class="atom-block-2" ng-click="contentActive = !false; block.btnDesc2 = 'Voltar'" ng-class="{'active': contentActive}" ng-init="contentActive = false; block.btnDesc2 = 'Descrição'">
+		<div class  ="atom-block-2"
+			ng-init ="block2.btnDesc = 'Descrição';  block2.active = false"
+			ng-click="block2.active = !block2.active; block2.btnDesc = block2.active ? 'Voltar':'Descrição'"
+			ng-class="{'active2': block2.active}">
+
 			<div class="atom-block-image"></div>
 			<div class="atom-block-border"></div>
 			<div class="atom-block-info">
 				<h2 class="atom-block-title">Titulo</h2>
 				<h3 class="atom-block-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi. Deleniti sit, quam.</h3>
 			</div>
-			<div class="atom-block-btn"><a ng-init="block.btnDesc2 = 'Mais informações'" class="btn">{{block.btnDesc2}}</a></div>
+			<div class="atom-block-btn"><a class="btn">{{block2.btnDesc}}</a></div>
 
-			<div class="atom-block-content" ng-class="{'active2': contentActive}" ng-init="contentActive = false">
+			<div class="atom-block-content">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eaque ipsam ipsum iste, alias mollitia culpa ea, tenetur repudiandae, amet molestias blanditiis distinctio sapiente saepe quod nam aut vitae temporibus.</p>
 			</div>
+
 		</div>
 		<!-- atom block end -->
 
-		<div class="atom-block-3">
-			<div class="atom-block-image">
-	
-			</div>
+		<div class	="atom-block-3"
+			ng-init ="block3.btnDesc = 'Descrição';  block3.active = false"
+			ng-click="block3.active = !block3.active; block3.btnDesc = block3.active ? 'Voltar':'Descrição'"
+			ng-class="{'active3': block3.active}">
+			<div class="atom-block-image"></div>
 			<div class="atom-block-border"></div>
 			<div class="atom-block-info">
 				<h2 class="atom-block-title">Titulo</h2>
 				<h3 class="atom-block-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi. Deleniti sit, quam.</h3>
 			</div>
-			<div class="atom-block-btn"><a href="" class="btn">{{block.btnDesc3}}</a></div>
+			<div class="atom-block-btn"><a href="" class="btn">{{block3.btnDesc}}</a></div>
+
+			<div class="atom-block-content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eaque ipsam ipsum iste, alias mollitia culpa ea, tenetur repudiandae, amet molestias blanditiis distinctio sapiente saepe quod nam aut vitae temporibus.</p>
+			</div>
 		</div>
 	</section>
 
+	<section class="molecule-explore">
+		<div class="atom-description">
+		<div class="atom-block-border"></div>
+			<div class="atom-description-content">
+				<h2 class="atom-description-title">Explore</h2>
+				<p class="atom-description-explore">Encontre rapidamente algum músico, com a ajuda de um filtro.</p>
+				<a href="atom-btn-explore btn"></a>
+			</div>
+		</div>
+		<!-- blocks -->
+		<div class="atom-explore">
+			<div class="atom-border-vertical"></div>
+			<div class="atom-border-horizontal"></div>
+			<div class="atom-explore-group">
+				<a href="" class="atom-explore-block">
+					<div class="atom-explore-content">
+						<p>Lorem Ipsum<br><span>Titulo</span></p>
+						<div class="atom-explore-icon"></div>
+						<p>Outra descricao</p>
+					</div>
+				</a>
+			</div>
+			<div class="atom-explore-group">
+				<a href="" class="atom-explore-block">
+					<div class="atom-explore-content">
+						<p>Lorem Ipsum<br><span>Titulo</span></p>
+						<div class="atom-explore-icon"></div>
+						<p>Outra descricao</p>
+					</div>
+				</a>
+			</div>
+			<div class="atom-explore-group">
+				<a href="" class="atom-explore-block">
+					<div class="atom-explore-content">
+						<p>Lorem Ipsum<br><span>Titulo</span></p>
+						<div class="atom-explore-icon"></div>
+						<p>Outra descricao</p>
+					</div>
+				</a>
+			</div>
+			<div class="atom-explore-group">
+				<a href="" class="atom-explore-block">
+					<div class="atom-explore-content">
+						<p>Lorem Ipsum<br><span>Titulo</span></p>
+						<div class="atom-explore-icon"></div>
+						<p>Outra descricao</p>
+					</div>
+				</a>
+			</div>
+		</div>		
+	</section>
 </div>

@@ -8,13 +8,6 @@
       this.$http = $http;
       this.awesomeThings = [];
       this.block = {};
-      this.home = function() {
-        this.block = {
-          btnDesc1: 'Descrição'
-        , btnDesc2: 'Descrição'
-        , btnDesc3: 'Descrição'
-        };
-      }
     }
 
     $onInit() {
