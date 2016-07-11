@@ -1,11 +1,35 @@
 .atom-explore-left
 //	
 .atom-description
-	height 460px
+	height 399px
 	background no-repeat top/cover url(https://visualhunt.com/photos/xl/1/performance-show-showing.jpg)
 	position relative
+	transition all 1s
+	top 1px
 	+above(5)
 		col(7/12, gutter: 0)
+		
+	&:hover
+		.next
+			.icon-next
+				+above(4)
+					width 90px
+					height 90px
+	.atom-block-border
+		transition all .3s
+		&:hover
+			background-color rgba(178, 138, 218, 0.52)
+//click:
+.atom-description.active
+	+above(3)
+		col(4/12, gutter: 0)
+		.next
+			opacity 0
+			visibility hidden
+.atom-description-image
+	z-index 10
+	height 100%
+
 .atom-description-title
 	font-size em(38)
 	color white
@@ -20,6 +44,8 @@
 	text-align center
 	padding-left 40px
 	padding-right 40px
+	+above(5)
+		$center('horizontal')
 	
 .atom-description-explore
 	font-size em(22)
@@ -27,14 +53,22 @@
 
 .atom-explore
 	position relative
+	transition all 1s
+	
 	clearfix();
 	+above(5)
 		margin-top 15px
 		col(5/12, gutter: 0)
-		
+	+above(4)
+		&.active
+			col(8/12)
+			.atom-explore-group
+				span(4/8)
+
 .atom-explore-group
 	span(2/4)
 	background-color main
+
 .atom-explore-content
 	height 100%
 	p
