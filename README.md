@@ -1,4 +1,4 @@
-# Musicians App :musical_note: :musical_keyboard:
+# weJam:musical_note: :musical_keyboard:
 
 Sabe tocar algum instrumento ? E quer ter uma banda mas não conhece outras pessoas que 
 também queiram ? 
